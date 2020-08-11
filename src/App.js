@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from "react-router-dom";
 import './App.css';
+
+// Seperate component file created for this. With nested route inside.
 import Category from './Category';
 
-// const Home = () => (
-//   <div>
-//     <h2>Home</h2>
-//   </div>
-// );
+// Components stored locally on app.js for now. these should be seperate component files.
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+);
 
 // const Category = () => (
 //   <div>
@@ -15,11 +18,11 @@ import Category from './Category';
 //   </div>
 // );
 
-// const Products = () => (
-//   <div>
-//     <h2>Products</h2>
-//   </div>
-// );
+const Products = () => (
+  <div>
+    <h2>Products</h2>
+  </div>
+);
 
 function App() {
   return (
@@ -38,9 +41,9 @@ function App() {
         </ul>
       </nav>
       <Switch>
-      {/* <Route exact={true} path="/" component={Home} /> */}
-      <Route path="/category" component={Category} />
-      {/* <Route path="/products" component={Products} /> */}
+        <Route exact={true} path="/" component={Home} />
+        <Route path="/category" component={Category} />
+        <Route path="/products" component={Products} />
       </Switch>
     </div>
   );
